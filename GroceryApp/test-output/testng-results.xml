@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-06T19:49:53 IST" name="Default suite" finished-at="2026-01-06T19:50:06 IST" duration-ms="13001">
+    <groups>
+    </groups>
+    <test started-at="2026-01-06T19:49:53 IST" name="Default test" finished-at="2026-01-06T19:50:06 IST" duration-ms="13001">
+      <class name="testScript.ManageCategoryTest">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testScript.ManageCategoryTest@145f66e3]" started-at="2026-01-06T19:49:53 IST" name="browserInitialization" finished-at="2026-01-06T19:49:57 IST" duration-ms="4390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyCategory()[pri:0, instance:testScript.ManageCategoryTest@145f66e3]" started-at="2026-01-06T19:49:57 IST" name="verifyCategory" finished-at="2026-01-06T19:50:06 IST" duration-ms="8537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCategory -->
+      </class> <!-- testScript.ManageCategoryTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
