@@ -6,72 +6,87 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtility;
 import utilities.WaitUtility;
 
 public class AdminUsersPage {
 	public WebDriver driver;
-	
-	@FindBy(xpath = "//div[@class='row']//div[1]//div//a")WebElement adminusers_moreinfo;
-	@FindBy(xpath = "//a[contains(@onclick,'click_button(1)')]")WebElement locator_new;
-	@FindBy(css = "input#username")WebElement locator_username;
-	@FindBy(css = "input#password")WebElement locator_password;
-	@FindBy(css = "select#user_type")WebElement usertype_dropdown;
-	@FindBy(xpath = "//i[contains(@class,'fa-save')]")WebElement savebutton;
-	@FindBy(xpath = "//div[contains(@class,'alert-success')]")WebElement usercreated_alert;
-	@FindBy(xpath = "//div[contains(@class,'alert-danger')]")WebElement useralreadyexists_alert;
-	
+
+	// @FindBy(xpath = "//div[@class='row']//div[1]//div//a")WebElement
+	// adminusers_moreinfo;
+	@FindBy(xpath = "//a[contains(@onclick,'click_button(1)')]")
+	WebElement locator_new;
+	@FindBy(css = "input#username")
+	WebElement locator_username;
+	@FindBy(css = "input#password")
+	WebElement locator_password;
+	@FindBy(css = "select#user_type")
+	WebElement usertype_dropdown;
+	@FindBy(xpath = "//i[contains(@class,'fa-save')]")
+	WebElement savebutton;
+	@FindBy(xpath = "//div[contains(@class,'alert-success')]")
+	WebElement usercreated_alert;
+	@FindBy(xpath = "//div[contains(@class,'alert-danger')]")
+	WebElement useralreadyexists_alert;
+
 	public AdminUsersPage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	public void clickAdminUsersMoreInfo() {
-		WaitUtility waitutility=new WaitUtility();
-		waitutility.waitForElementToBeClickable(driver, adminusers_moreinfo);
-		adminusers_moreinfo.click();
-	}
-	
-	public void clickNew() {
+
+	/*
+	 * public void clickAdminUsersMoreInfo() { WaitUtility waitutility=new
+	 * WaitUtility(); waitutility.waitForElementToBeClickable(driver,
+	 * adminusers_moreinfo); adminusers_moreinfo.click(); }
+	 */
+
+	public AdminUsersPage clickNew() {
 		locator_new.click();
+		return this;
 	}
-	
-	public void enterUsername(String uname) {
+
+	public AdminUsersPage enterUsername(String uname) {
 		locator_username.sendKeys(uname);
+		return this;
 	}
-	
-	public void enterPassword(String password) {
+
+	public AdminUsersPage enterPassword(String password) {
 		locator_password.sendKeys(password);
+		return this;
 	}
-	
-	public void selectUserType(String value) {
-		Select select=new Select(usertype_dropdown);
-		select.selectByValue(value);
+
+	public AdminUsersPage selectUserType(String value) {
+		PageUtility pageutility = new PageUtility();
+		pageutility.selectByValueMethod(usertype_dropdown, value);
+		/*
+		 * Select select=new Select(usertype_dropdown); select.selectByValue(value);
+		 */
+		return this;
 	}
-	
-	public void clickSave() {
+
+	public AdminUsersPage clickSave() {
 		savebutton.click();
+		return this;
 	}
-	
+
 	public boolean isAlertDisplayed() {
-	    try {
-	        if (usercreated_alert.isDisplayed()) {
-	            return true;
-	        }
-	    } 
-	    catch (Exception ignored) {
-	    	
-	    }
+		try {
+			if (usercreated_alert.isDisplayed()) {
+				return true;
+			}
+		} catch (Exception ignored) {
 
-	    try {
-	        if (useralreadyexists_alert.isDisplayed()) {
-	            return true;
-	        }
-	    } 
-	    catch (Exception ignored) {
-	    	
-	    }
+		}
 
-	    return false;
+		try {
+			if (useralreadyexists_alert.isDisplayed()) {
+				return true;
+			}
+		} catch (Exception ignored) {
+
+		}
+
+		return false;
 	}
 
 }

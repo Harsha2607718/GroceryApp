@@ -1,21 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-06T19:49:53 IST" name="Default suite" finished-at="2026-01-06T19:50:06 IST" duration-ms="13001">
+  <suite started-at="2026-01-12T11:16:29 IST" name="Suite" finished-at="2026-01-12T11:17:08 IST" duration-ms="39165">
     <groups>
     </groups>
-    <test started-at="2026-01-06T19:49:53 IST" name="Default test" finished-at="2026-01-06T19:50:06 IST" duration-ms="13001">
+    <test started-at="2026-01-12T11:16:29 IST" name="Test" finished-at="2026-01-12T11:17:08 IST" duration-ms="39165">
       <class name="testScript.ManageCategoryTest">
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testScript.ManageCategoryTest@145f66e3]" started-at="2026-01-06T19:49:53 IST" name="browserInitialization" finished-at="2026-01-06T19:49:57 IST" duration-ms="4390" status="PASS">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.ManageCategoryTest@6f43c82]" started-at="2026-01-12T11:16:29 IST" name="browserInitialization" finished-at="2026-01-12T11:16:38 IST" duration-ms="8864" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="verifyCategory()[pri:0, instance:testScript.ManageCategoryTest@145f66e3]" started-at="2026-01-06T19:49:57 IST" name="verifyCategory" finished-at="2026-01-06T19:50:06 IST" duration-ms="8537" status="PASS">
+        <test-method signature="verifyCategory()[pri:0, instance:testScript.ManageCategoryTest@6f43c82]" started-at="2026-01-12T11:16:38 IST" name="verifyCategory" description="Test case to verify alerts for new and existing category scenarios." finished-at="2026-01-12T11:16:51 IST" duration-ms="12500" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCategory -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManageCategoryTest@6f43c82]" started-at="2026-01-12T11:16:51 IST" name="browserQuit" finished-at="2026-01-12T11:16:51 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCategory status=SUCCESS method=ManageCategoryTest.verifyCategory()[pri:0, instance:testScript.ManageCategoryTest@6f43c82] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
       </class> <!-- testScript.ManageCategoryTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testScript.AdminUsersTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@24c1b2d2]" started-at="2026-01-12T11:16:51 IST" name="browserInitialization" finished-at="2026-01-12T11:16:58 IST" duration-ms="7100" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyAdminUsers()[pri:0, instance:testScript.AdminUsersTest@24c1b2d2]" started-at="2026-01-12T11:16:58 IST" name="verifyAdminUsers" description="Test case to verify that the appropriate alert is displayed correctly when a new user is created or when the user already exists" finished-at="2026-01-12T11:17:08 IST" duration-ms="10610" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAdminUsers -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@24c1b2d2]" started-at="2026-01-12T11:17:08 IST" name="browserQuit" finished-at="2026-01-12T11:17:08 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAdminUsers status=SUCCESS method=AdminUsersTest.verifyAdminUsers()[pri:0, instance:testScript.AdminUsersTest@24c1b2d2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+      </class> <!-- testScript.AdminUsersTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

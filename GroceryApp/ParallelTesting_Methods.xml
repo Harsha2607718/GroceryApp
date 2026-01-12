@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParallelTesting" parallel="classes">
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="testScript.ManageFooterTextTest" />
+			<class name="testScript.ManageCategoryTest" />
+			<class name="testScript.ContactUsTest" />
+			<class name="testScript.ManageNewsTest" />
+			<class name="testScript.AdminUsersTest" />
+			<class name="testScript.LogoutTest" />
+			<class name="testScript.LoginTest" />
+			<!--<class name="testScript.LoginTest" >
+			<methods>
+			<include name="verifyUserLoginWithValidCredentials"></include>
+			<include name="verifyUserLoginWithCorrectUnameAndIncorrectPassword"></include>
+			</methods>
+			</class>-->
+		</classes>
+	</test>
+
+
+</suite> <!--
+Suite -->
