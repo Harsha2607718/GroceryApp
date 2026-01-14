@@ -31,8 +31,7 @@ public class AdminUsersTest extends Base {
 		String username = fakerutility.creatARandomFirstName();
 		String password = fakerutility.creatARandomFirstName();
 		//String selectbyvalue = "staff";//read from excel
-		String value=ExcelUtility.readStringData(1, 2, "AdminUsers");
-		System.out.println("value="+value);		
+		String value=ExcelUtility.readStringData(1, 2, "AdminUsers");		
 		adminuserspage = logoutpage.clickAdminUsersMoreInfo();
 		adminuserspage.clickNew().enterUsername(username).enterPassword(password).selectUserType(value)
 				.clickSave();
