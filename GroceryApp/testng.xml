@@ -12,7 +12,7 @@
       		<include name="verifyManageFooterText"></include>
       	</methods>
       </class>-->
-			<class name="testScript.ManageCategoryTest" />
+			<!--<class name="testScript.ManageCategoryTest" />-->
 			<!--<class name="testScript.ContactUsTest"/>
       <class name="testScript.ManageNewsTest"/>
       <class name="testScript.LogoutTest"/>

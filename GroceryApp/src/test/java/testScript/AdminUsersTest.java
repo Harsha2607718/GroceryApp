@@ -30,9 +30,11 @@ public class AdminUsersTest extends Base {
 		FakerUtility fakerutility = new FakerUtility();
 		String username = fakerutility.creatARandomFirstName();
 		String password = fakerutility.creatARandomFirstName();
-		String selectbyvalue = "staff";//read from excel
+		//String selectbyvalue = "staff";//read from excel
+		String value=ExcelUtility.readStringData(1, 2, "AdminUsers");
+		System.out.println("value="+value);		
 		adminuserspage = logoutpage.clickAdminUsersMoreInfo();
-		adminuserspage.clickNew().enterUsername(username).enterPassword(password).selectUserType(selectbyvalue)
+		adminuserspage.clickNew().enterUsername(username).enterPassword(password).selectUserType(value)
 				.clickSave();
 
 		// String username=ExcelUtility.readStringData(1, 0, "AdminUsers");
